@@ -50,7 +50,7 @@ class BrunchController {
      */
     func add(brunchSpotwith name: String) {
         // Do not need to assign this to a property because the initalizer is marked @discardableResult
-        BrunchSpot(name: name)
+        let _ = BrunchSpot(name: name)
         saveToPersistentStore() // defined below
     }
 
@@ -68,7 +68,7 @@ class BrunchController {
         brunch.name = name
         brunch.tier = tier
         brunch.summary = summary
-
+        
         saveToPersistentStore()
     }
 
