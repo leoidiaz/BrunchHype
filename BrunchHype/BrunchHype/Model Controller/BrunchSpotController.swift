@@ -23,7 +23,7 @@ class BrunchController {
         //creates request
         let request: NSFetchRequest<BrunchSpot> = BrunchSpot.fetchRequest()
         // Add the Sort Descriptors to the request. Sort Descriptors allows us to determine how we want the data organized from the fetch request
-        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(key: "tier", ascending: true), NSSortDescriptor(key: "name", ascending: true)]
         // Initialize a NSfetchedResultsController using the Fetch Request we just created
         let resultsController: NSFetchedResultsController<BrunchSpot> = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: "tier", cacheName: nil)
         // Set the initized NSFRC to our property
