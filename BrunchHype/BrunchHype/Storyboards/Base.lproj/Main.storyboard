@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kdp-ZH-5nP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Brunch Spot List Table View Controller-->
+        <scene sceneID="EjP-bC-G0i">
+            <objects>
+                <tableViewController id="VhZ-XF-WD9" customClass="BrunchSpotListTableViewController" customModule="BrunchHype" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uYs-7s-1yi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="brunchSpotCell" rowHeight="106" id="onM-6k-Bji" customClass="BrunchSpotTableViewCell" customModule="BrunchHype" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="106"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="onM-6k-Bji" id="x6W-2r-zvF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Usv-lO-w4m">
+                                            <rect key="frame" x="20" y="11" width="374" height="84"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Park Cafe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-2u-hQj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Boe-Qd-ywB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Sis-XA-MwF">
+                                                    <rect key="frame" x="0.0" y="38" width="374" height="47"/>
+                                                    <segments>
+                                                        <segment title="S Tier"/>
+                                                        <segment title="A Tier"/>
+                                                        <segment title="Meh"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="tierChanged:" destination="onM-6k-Bji" eventType="valueChanged" id="pbw-dx-Hre"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Usv-lO-w4m" firstAttribute="top" secondItem="x6W-2r-zvF" secondAttribute="topMargin" id="GBW-Sk-Slh"/>
+                                        <constraint firstItem="Usv-lO-w4m" firstAttribute="leading" secondItem="x6W-2r-zvF" secondAttribute="leadingMargin" id="SDZ-Qn-dfl"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Usv-lO-w4m" secondAttribute="trailing" id="gCK-FH-PCW"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Usv-lO-w4m" secondAttribute="bottom" id="u43-2F-iIw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="brunchSpotNameLabel" destination="cy9-2u-hQj" id="FWg-D3-TMZ"/>
+                                    <outlet property="brunchTierSegmentedControl" destination="Sis-XA-MwF" id="Sh8-kR-xeE"/>
+                                    <segue destination="igG-bX-7YP" kind="show" identifier="toDetailVC" id="fns-qc-mE9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VhZ-XF-WD9" id="2wO-5c-YO5"/>
+                            <outlet property="delegate" destination="VhZ-XF-WD9" id="rQs-6R-9eN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="uQK-vp-iTS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lBV-qO-hyO">
+                            <connections>
+                                <action selector="addBrunchSpotButtonTapped:" destination="VhZ-XF-WD9" id="HmA-yT-ql3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ssm-kD-1Fb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.98550724637687" y="-201.5625"/>
+        </scene>
+        <!--Brunch Spot Detail View Controller-->
+        <scene sceneID="6fn-Ld-u8D">
+            <objects>
+                <viewController id="igG-bX-7YP" customClass="BrunchSpotDetailViewController" customModule="BrunchHype" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pNB-WF-GSn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f4W-cz-GFk">
+                                <rect key="frame" x="87" y="417" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oIA-Bp-Hvn">
+                                <rect key="frame" x="134" y="204" width="147" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="S"/>
+                                    <segment title="A"/>
+                                    <segment title="Meh"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2OA-Tw-6KN">
+                                <rect key="frame" x="29" y="110" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yH2-x0-TLV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WEJ-VL-xn5">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" id="zgY-Rd-f0A">
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="igG-bX-7YP" id="pB9-b2-uqb"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" id="1N5-ed-zg1">
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="igG-bX-7YP" id="6R4-Sf-fZi"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="brunchNameTextField" destination="2OA-Tw-6KN" id="qky-Kb-JHI"/>
+                        <outlet property="brunchSummaryTextView" destination="f4W-cz-GFk" id="jof-R2-ZOo"/>
+                        <outlet property="brunchTierSegmentedControl" destination="oIA-Bp-Hvn" id="Id0-vr-CSg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhw-DV-fbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705.7971014492755" y="-202.23214285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pbg-7d-MkL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kdp-ZH-5nP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aHh-wh-2LV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VhZ-XF-WD9" kind="relationship" relationship="rootViewController" id="w7E-wD-kfN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Bo-f1-xAL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81.159420289855078" y="-201.5625"/>
+        </scene>
+    </scenes>
+</document>
