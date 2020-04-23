@@ -162,10 +162,10 @@ extension BrunchSpotListTableViewController: NSFetchedResultsControllerDelegate 
             case .move:
                 guard let indexPath = indexPath, let newIndexPath = newIndexPath else { break }
                 tableView.moveRow(at: indexPath, to: newIndexPath)
+                tableView.reloadData()
             case .update:
                 guard let indexPath = indexPath else { break }
                 tableView.reloadRows(at: [indexPath], with: .automatic)
-
             @unknown default:
                 fatalError()
         }
