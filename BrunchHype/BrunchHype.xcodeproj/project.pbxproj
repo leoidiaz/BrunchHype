@@ -13,12 +13,7 @@
 		FB346F002451FF7600B56A62 /* BrunchHype.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB346EFE2451FF7600B56A62 /* BrunchHype.xcdatamodeld */; };
 		FB346F022451FF7800B56A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB346F012451FF7800B56A62 /* Assets.xcassets */; };
 		FB346F052451FF7800B56A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB346F032451FF7800B56A62 /* LaunchScreen.storyboard */; };
-		FB346F10245201F800B56A62 /* BrunchSpot+Convience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB346F0F245201F800B56A62 /* BrunchSpot+Convience.swift */; };
 		FB346F132452022600B56A62 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB346F122452022600B56A62 /* CoreDataStack.swift */; };
-		FB346F152452031700B56A62 /* BrunchSpotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB346F142452031700B56A62 /* BrunchSpotController.swift */; };
-		FB346F17245208CF00B56A62 /* BrunchSpotListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB346F16245208CF00B56A62 /* BrunchSpotListTableViewController.swift */; };
-		FB346F1A2452091300B56A62 /* BrunchSpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB346F192452091300B56A62 /* BrunchSpotDetailViewController.swift */; };
-		FB346F1D24520F2A00B56A62 /* BrunchSpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB346F1C24520F2A00B56A62 /* BrunchSpotTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +25,7 @@
 		FB346F012451FF7800B56A62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB346F042451FF7800B56A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB346F062451FF7800B56A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB346F0F245201F800B56A62 /* BrunchSpot+Convience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrunchSpot+Convience.swift"; sourceTree = "<group>"; };
 		FB346F122452022600B56A62 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		FB346F142452031700B56A62 /* BrunchSpotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrunchSpotController.swift; sourceTree = "<group>"; };
-		FB346F16245208CF00B56A62 /* BrunchSpotListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrunchSpotListTableViewController.swift; sourceTree = "<group>"; };
-		FB346F192452091300B56A62 /* BrunchSpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrunchSpotDetailViewController.swift; sourceTree = "<group>"; };
-		FB346F1C24520F2A00B56A62 /* BrunchSpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrunchSpotTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				FB346EFE2451FF7600B56A62 /* BrunchHype.xcdatamodeld */,
-				FB346F0F245201F800B56A62 /* BrunchSpot+Convience.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,7 +107,6 @@
 		FB346F18245208D600B56A62 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FB346F142452031700B56A62 /* BrunchSpotController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -126,11 +114,16 @@
 		FB346F1B2452091800B56A62 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FB346F16245208CF00B56A62 /* BrunchSpotListTableViewController.swift */,
-				FB346F192452091300B56A62 /* BrunchSpotDetailViewController.swift */,
-				FB346F1C24520F2A00B56A62 /* BrunchSpotTableViewCell.swift */,
+				FB9CDF5724525629007C360E /* Custom Views */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FB9CDF5724525629007C360E /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,13 +198,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB346F132452022600B56A62 /* CoreDataStack.swift in Sources */,
-				FB346F1A2452091300B56A62 /* BrunchSpotDetailViewController.swift in Sources */,
-				FB346F152452031700B56A62 /* BrunchSpotController.swift in Sources */,
-				FB346F17245208CF00B56A62 /* BrunchSpotListTableViewController.swift in Sources */,
 				FB346EF62451FF7600B56A62 /* AppDelegate.swift in Sources */,
-				FB346F1D24520F2A00B56A62 /* BrunchSpotTableViewCell.swift in Sources */,
 				FB346EF82451FF7600B56A62 /* SceneDelegate.swift in Sources */,
-				FB346F10245201F800B56A62 /* BrunchSpot+Convience.swift in Sources */,
 				FB346F002451FF7600B56A62 /* BrunchHype.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
