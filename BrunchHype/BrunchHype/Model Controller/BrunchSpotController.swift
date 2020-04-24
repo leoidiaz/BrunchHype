@@ -16,7 +16,17 @@ class BrunchSpotController {
     //MARK: - Fetched Result controller
     
     //MARK: - CRUD
-    
+    func create(brunchSpotWith name: String) {
+        
+    }
+    func update(brunchSpot: BrunchSpot, name: String, tier: String, summary: String) {
+        
+    }
+    func remove(brunchSpot: BrunchSpot) {
+        
+    }
     //MARK: - Persistence
-    
+    func save() {
+        
+    }
 }// End of Class
