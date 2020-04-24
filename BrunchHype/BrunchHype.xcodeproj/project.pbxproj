@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2916120C245269DF00D70F36 /* BrunchSpot+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2916120B245269DF00D70F36 /* BrunchSpot+Convenience.swift */; };
 		FB346EF62451FF7600B56A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB346EF52451FF7600B56A62 /* AppDelegate.swift */; };
 		FB346EF82451FF7600B56A62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB346EF72451FF7600B56A62 /* SceneDelegate.swift */; };
 		FB346EFD2451FF7600B56A62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB346EFB2451FF7600B56A62 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2916120B245269DF00D70F36 /* BrunchSpot+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrunchSpot+Convenience.swift"; sourceTree = "<group>"; };
 		FB346EF22451FF7600B56A62 /* BrunchHype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrunchHype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB346EF52451FF7600B56A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB346EF72451FF7600B56A62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,9 @@
 			isa = PBXGroup;
 			children = (
 				FB346EF42451FF7600B56A62 /* BrunchHype */,
+				FB346F0D245201BB00B56A62 /* Storyboards */,
+				FB346F0C2452019100B56A62 /* Resources */,
+				FB346F112452020F00B56A62 /* Helper Files */,
 				FB346EF32451FF7600B56A62 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,9 +63,6 @@
 		FB346EF42451FF7600B56A62 /* BrunchHype */ = {
 			isa = PBXGroup;
 			children = (
-				FB346F112452020F00B56A62 /* Helper Files */,
-				FB346F0C2452019100B56A62 /* Resources */,
-				FB346F0D245201BB00B56A62 /* Storyboards */,
 				FB346F0E245201D000B56A62 /* Model */,
 				FB346F18245208D600B56A62 /* Model Controller */,
 				FB346F1B2452091800B56A62 /* View Controllers */,
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				FB346EFE2451FF7600B56A62 /* BrunchHype.xcdatamodeld */,
+				2916120B245269DF00D70F36 /* BrunchSpot+Convenience.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				FB346EF62451FF7600B56A62 /* AppDelegate.swift in Sources */,
 				FB346EF82451FF7600B56A62 /* SceneDelegate.swift in Sources */,
 				FB346F002451FF7600B56A62 /* BrunchHype.xcdatamodeld in Sources */,
+				2916120C245269DF00D70F36 /* BrunchSpot+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
