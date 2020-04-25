@@ -43,6 +43,11 @@ class BrunchSpotController {
         brunchSpot.summary = summary
         save()
     }
+    /// Notify the ModelController to save change
+    func changeTier(for brunchSpot: BrunchSpot, with newTier: String) {
+        brunchSpot.tier = newTier
+        save()
+    }
     func remove(brunchSpot: BrunchSpot) {
         CoreDataStack.context.delete(brunchSpot)
         save()

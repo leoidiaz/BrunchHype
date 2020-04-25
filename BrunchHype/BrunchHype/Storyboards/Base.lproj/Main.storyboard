@@ -2,21 +2,21 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kdp-ZH-5nP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Brunch Spot List Table View Controller-->
         <scene sceneID="EjP-bC-G0i">
             <objects>
-                <tableViewController id="VhZ-XF-WD9" sceneMemberID="viewController">
+                <tableViewController id="VhZ-XF-WD9" customClass="BrunchSpotListTableViewController" customModule="BrunchHype" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uYs-7s-1yi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="106" id="onM-6k-Bji" customClass="BrunchSpotTableViewCell" customModule="BrunchHype" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="brunchSpotCell" rowHeight="106" id="onM-6k-Bji" customClass="BrunchSpotTableViewCell" customModule="BrunchHype" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="106"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="onM-6k-Bji" id="x6W-2r-zvF">
@@ -43,7 +43,7 @@
                                                         <segment title="Meh"/>
                                                     </segments>
                                                     <connections>
-                                                        <action selector="tierChanged:" destination="onM-6k-Bji" eventType="valueChanged" id="pbw-dx-Hre"/>
+                                                        <action selector="tierChanged:" destination="onM-6k-Bji" eventType="valueChanged" id="Uj0-d6-eoX"/>
                                                     </connections>
                                                 </segmentedControl>
                                             </subviews>
@@ -57,8 +57,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="brunchSpotNameLabel" destination="cy9-2u-hQj" id="FWg-D3-TMZ"/>
-                                    <outlet property="brunchTierSegmentedControl" destination="Sis-XA-MwF" id="Sh8-kR-xeE"/>
+                                    <outlet property="brunchSpotNameLabel" destination="cy9-2u-hQj" id="JZS-dZ-mKj"/>
+                                    <outlet property="brunchTierSegmentedControl" destination="Sis-XA-MwF" id="Z9i-3O-DcH"/>
                                     <segue destination="igG-bX-7YP" kind="show" identifier="toDetailVC" id="fns-qc-mE9"/>
                                 </connections>
                             </tableViewCell>
@@ -69,7 +69,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="uQK-vp-iTS">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lBV-qO-hyO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lBV-qO-hyO">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="VhZ-XF-WD9" id="67m-Tp-czL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ssm-kD-1Fb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
